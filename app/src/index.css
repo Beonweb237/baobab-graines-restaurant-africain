@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 100% 98%;
+    --foreground: 30 8% 10%;
+    --card: 36 100% 98%;
+    --card-foreground: 30 8% 10%;
+    --popover: 36 100% 98%;
+    --popover-foreground: 30 8% 10%;
+    --primary: 22 47% 16%;
+    --primary-foreground: 36 100% 98%;
+    --secondary: 25 14% 49%;
+    --secondary-foreground: 36 100% 98%;
+    --muted: 36 24% 92%;
+    --muted-foreground: 25 30% 42%;
+    --accent: 78 37% 25%;
+    --accent-foreground: 36 100% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 36 100% 98%;
+    --border: 30 8% 10% / 0.15;
+    --input: 30 8% 10% / 0.1;
+    --ring: 22 47% 16%;
+    --radius: 0.625rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #FFFBF5;
+    color: #1C1917;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  ::selection {
+    background-color: #3B2314;
+    color: #FFFBF5;
+  }
+}
+
+/* Lenis smooth scroll styles */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
